@@ -1,0 +1,11 @@
+{
+    "name": "onpubcom/onpubapi",
+    "description": "The Onpub CMS PHP API",
+    "type": "library",
+    "homepage": "http://onpub.com/",
+    "license": "GPL-2.0",
+    "keywords": ["cms", "onpub"],
+    "require": {
+        "php": ">=5.4.36"
+    }
+}
