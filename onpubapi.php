@@ -16,30 +16,30 @@ define("ONPUBAPI_SCHEMA_VERSION", 1);
 //include ("phpThumb/phpThumb.config.php");
 
 // Database Class
-include("classes/OnpubDatabase.php");
+//include("classes/OnpubDatabase.php");
 
 // Table Classes
-include("classes/OnpubAAMaps.php");
-include("classes/OnpubArticles.php");
-include("classes/OnpubAuthors.php");
-include("classes/OnpubImages.php");
-include("classes/OnpubSAMaps.php");
-include("classes/OnpubSections.php");
-include("classes/OnpubWebsites.php");
-include("classes/OnpubWSMaps.php");
+//include("classes/OnpubAAMaps.php");
+//include("classes/OnpubArticles.php");
+//include("classes/OnpubAuthors.php");
+//include("classes/OnpubImages.php");
+//include("classes/OnpubSAMaps.php");
+//include("classes/OnpubSections.php");
+//include("classes/OnpubWebsites.php");
+//include("classes/OnpubWSMaps.php");
 
 // Row Classes
-include("classes/OnpubArticle.php");
-include("classes/OnpubAAMap.php");
-include("classes/OnpubAuthor.php");
-include("classes/OnpubImage.php");
-include("classes/OnpubSection.php");
-include("classes/OnpubSAMap.php");
-include("classes/OnpubWebsite.php");
-include("classes/OnpubWSMap.php");
+//include("classes/OnpubArticle.php");
+//include("classes/OnpubAAMap.php");
+//include("classes/OnpubAuthor.php");
+//include("classes/OnpubImage.php");
+//include("classes/OnpubSection.php");
+//include("classes/OnpubSAMap.php");
+//include("classes/OnpubWebsite.php");
+//include("classes/OnpubWSMap.php");
 
 // Option Classes
-include("classes/OnpubQueryOptions.php");
+//include("classes/OnpubQueryOptions.php");
 
 // Useful string functions
 
