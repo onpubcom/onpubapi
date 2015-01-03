@@ -427,11 +427,11 @@ class OnpubImages
 
   public static function getThumbURL($phpThumbParams, $onpub_dir_phpthumb = '../api/phpThumb/')
   {
-    //global $PHPTHUMB_CONFIG;
+    global $PHPTHUMB_CONFIG;
 
-    //if ($PHPTHUMB_CONFIG['high_security_enabled']) {
-      //return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams . '&hash=' . md5($phpThumbParams . $PHPTHUMB_CONFIG['high_security_password']);
-    //}
+    if ($PHPTHUMB_CONFIG['high_security_enabled']) {
+      return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams . '&hash=' . md5($phpThumbParams . $PHPTHUMB_CONFIG['high_security_password']);
+    }
 
     return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams;
   }

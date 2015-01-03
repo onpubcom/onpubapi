@@ -6,7 +6,8 @@
     "license": "GPL-2.0",
     "keywords": ["cms", "onpub"],
     "require": {
-        "php": ">=5.4.36"
+        "php": ">=5.4.36",
+        "james-heinrich/phpthumb": "dev-master"
     },
     "autoload": {
         "classmap": ["classes/"],
