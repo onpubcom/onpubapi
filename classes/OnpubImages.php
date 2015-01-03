@@ -433,6 +433,7 @@ class OnpubImages
       require_once 'vendor/james-heinrich/phpthumb/phpThumb.config.php';
     }
     else {
+      $onpub_dir_phpthumb = '../vendor/james-heinrich/phpthumb/';
       require_once '../../james-heinrich/phpthumb/phpThumb.config.php';
     }
 
