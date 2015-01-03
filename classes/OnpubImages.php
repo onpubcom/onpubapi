@@ -429,7 +429,7 @@ class OnpubImages
   {
     global $PHPTHUMB_CONFIG;
 
-    if (file_exists('vendor/james-heinrich/phpthumb/phpThumb.config.php') {
+    if (file_exists('vendor/james-heinrich/phpthumb/phpThumb.config.php')) {
       require_once 'vendor/james-heinrich/phpthumb/phpThumb.config.php';
     }
     else {
