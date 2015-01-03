@@ -425,11 +425,13 @@ class OnpubImages
     return $stmt->rowCount();
   }
 
-  public static function getThumbURL($phpThumbParams, $onpub_dir_phpthumb = '../api/phpThumb/')
+  public static function getThumbURL($phpThumbParams, $onpub_dir_phpthumb = 'vendor/james-heinrich/phpthumb/')
   {
     global $PHPTHUMB_CONFIG;
 
-    if ($PHPTHUMB_CONFIG['high_security_enabled']) {
+    require_once 'vendor/james-heinrich/phpthumb/phpThumb.config.php';
+
+    if (isset($PHPTHUMB_CONFIG['high_security_enabled']) && $PHPTHUMB_CONFIG['high_security_enabled']) {
       return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams . '&hash=' . md5($phpThumbParams . $PHPTHUMB_CONFIG['high_security_password']);
     }
 
