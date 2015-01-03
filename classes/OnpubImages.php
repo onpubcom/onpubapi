@@ -429,7 +429,12 @@ class OnpubImages
   {
     global $PHPTHUMB_CONFIG;
 
-    require_once 'vendor/james-heinrich/phpthumb/phpThumb.config.php';
+    if (file_exists('vendor/james-heinrich/phpthumb/phpThumb.config.php') {
+      require_once 'vendor/james-heinrich/phpthumb/phpThumb.config.php';
+    }
+    else {
+      require_once '../../james-heinrich/phpthumb/phpThumb.config.php';
+    }
 
     if (isset($PHPTHUMB_CONFIG['high_security_enabled']) && $PHPTHUMB_CONFIG['high_security_enabled']) {
       return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams . '&hash=' . md5($phpThumbParams . $PHPTHUMB_CONFIG['high_security_password']);
