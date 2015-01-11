@@ -433,12 +433,7 @@ class OnpubImages
     $phpthumb_config_file = $vendor_dir . 'james-heinrich/phpthumb/phpThumb.config.php';
 
     if (!$onpub_dir_phpthumb) {
-      if (strpos($_SERVER['SCRIPT_FILENAME'], 'vendor/') === FALSE) {
-        $onpub_dir_phpthumb = 'vendor/james-heinrich/phpthumb/';
-      }
-      else {
-        $onpub_dir_phpthumb = '../vendor/james-heinrich/phpthumb/';
-      }
+      $onpub_dir_phpthumb = '../vendor/james-heinrich/phpthumb/';
     }
 
     if (file_exists($phpthumb_config_file)) {
