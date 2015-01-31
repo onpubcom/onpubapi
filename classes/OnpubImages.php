@@ -425,20 +425,23 @@ class OnpubImages
     return $stmt->rowCount();
   }
 
-  public static function getThumbURL($phpThumbParams, $onpub_dir_phpthumb = 'vendor/james-heinrich/phpthumb/')
+  public static function getThumbURL($phpThumbParams, $onpub_dir_phpthumb = '')
   {
     global $PHPTHUMB_CONFIG;
 
-    if (file_exists('vendor/james-heinrich/phpthumb/phpThumb.config.php')) {
-      require_once 'vendor/james-heinrich/phpthumb/phpThumb.config.php';
-    }
-    else {
+    $vendor_dir = addTrailingSlash(dirname(dirname(dirname(__DIR__))));
+    $phpthumb_config_file = $vendor_dir . 'james-heinrich/phpthumb/phpThumb.config.php';
+
+    if (!$onpub_dir_phpthumb) {
       $onpub_dir_phpthumb = '../vendor/james-heinrich/phpthumb/';
-      require_once '../../james-heinrich/phpthumb/phpThumb.config.php';
     }
 
-    if (isset($PHPTHUMB_CONFIG['high_security_enabled']) && $PHPTHUMB_CONFIG['high_security_enabled']) {
-      return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams . '&hash=' . md5($phpThumbParams . $PHPTHUMB_CONFIG['high_security_password']);
+    if (file_exists($phpthumb_config_file)) {
+      require_once $phpthumb_config_file;
+
+      if (isset($PHPTHUMB_CONFIG['high_security_enabled']) && $PHPTHUMB_CONFIG['high_security_enabled']) {
+        return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams . '&hash=' . md5($phpThumbParams . $PHPTHUMB_CONFIG['high_security_password']);
+      }
     }
 
     return $onpub_dir_phpthumb . 'phpThumb.php?' . $phpThumbParams;
