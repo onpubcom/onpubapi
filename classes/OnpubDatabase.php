@@ -67,6 +67,8 @@ class OnpubDatabase
     $line = 0;
     $exceptions = array();
 
+    var_dump(__DIR__);
+
     $sqlfile = file('../api/sql/deleteonpubtables.sql');
 
     // advance past all comments

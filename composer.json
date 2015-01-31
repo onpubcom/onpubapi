@@ -7,7 +7,8 @@
     "keywords": ["cms", "onpub"],
     "require": {
         "php": ">=5.4.36",
-        "james-heinrich/phpthumb": "dev-master"
+        "james-heinrich/phpthumb": "dev-master",
+        "webmozart/path-util": "~1.0"
     },
     "autoload": {
         "classmap": ["classes/"],
