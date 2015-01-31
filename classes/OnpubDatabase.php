@@ -1,5 +1,7 @@
 <?php
 
+use Webmozart\PathUtil\Path;
+
 /**
  * Manage an Onpub database.
  *
@@ -67,9 +69,7 @@ class OnpubDatabase
     $line = 0;
     $exceptions = array();
 
-    var_dump(__DIR__);
-
-    $sqlfile = file('../api/sql/deleteonpubtables.sql');
+    $sqlfile = file(Path::canonicalize(__DIR__ . '/../sql/deleteonpubtables.sql'));
 
     // advance past all comments
     while (strpos($sqlfile[$line], '--') !== FALSE) {
@@ -132,7 +132,7 @@ class OnpubDatabase
     $line = 0;
     $exceptions = array();
 
-    $sqlfile = file('../api/sql/createonpubtables-rev0.sql');
+    $sqlfile = file(Path::canonicalize(__DIR__ . '/../sql/createonpubtables-rev0.sql'));
 
     // advance past all comments
     while (strpos($sqlfile[$line], '--') !== FALSE) {
