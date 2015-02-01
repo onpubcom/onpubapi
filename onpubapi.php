@@ -9,7 +9,7 @@
  * as published by the Free Software Foundation; version 2.
  */
 
-define("ONPUBAPI_VERSION", "1.6");
+define("ONPUBAPI_VERSION", "1.7");
 define("ONPUBAPI_SCHEMA_VERSION", 1);
 
 // Useful string functions
